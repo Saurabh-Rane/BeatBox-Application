@@ -50,10 +50,13 @@ let beats = {
  * HINT: use the keyCode
  */
 triggerBeat = (event) => {
-
+    if(event.keyCode in beats){
+        beats[event.keyCode].beat.playAudio();
+    }
 }
 
 /**
  * Keydown listener to fire triggerBeat function
  * HINT: Log the keyCode of the key
  */
+document.addEventListener("keydown" , triggerBeat);
