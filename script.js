@@ -61,6 +61,7 @@ let beats = {
 triggerBeat = (event) => {
     if(event.keyCode in beats){
         beats[event.keyCode].beat.playAudio();
+        beats[event.keyCode].button.select();
     }
 }
 
